@@ -3,7 +3,7 @@ import React from 'react'
 function card({username = "du är dummare", post = "Unemployd"}) {
     //console.log(props)
   return (
-    <div>
+    <div className='my-5'>
         <figure className="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
             <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
              src="https://wermdotkd.se/wp-content/uploads/2020/12/20201227_150232-5-1024x727.jpg" alt="" 
