@@ -1,3 +1,3 @@
-import InpuntBox from "./InpuntBox";
+import InputBox from "./InputBox";
 
-export{ InpuntBox }
+export{ InputBox }
