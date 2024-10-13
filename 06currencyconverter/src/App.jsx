@@ -1,8 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [amount, setAmount] = useState(0)
+  const [from, setFrom] = useState('usd')
+  const [to, setTo] = useState('sek')
+  const [convertedAmount, setConvertedAmount] = useState(0)
+
+  const curreInfo = useCurrencyInfo(from)
+  const options = Object.keys(curreInfo)
 
   return (
     <div className='w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat'
