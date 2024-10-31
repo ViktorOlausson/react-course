@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import appwriteService from "../appwrite/config"
 import Container from '../components/container/Container'
