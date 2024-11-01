@@ -19,7 +19,7 @@ function App() {
       }else{
         dispatch(logout())
       }
-    })
+    }).finally(() => setLoading(false))
   }, [dispatch])
 
   return !loading ? (

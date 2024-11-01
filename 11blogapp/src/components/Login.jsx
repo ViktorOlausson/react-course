@@ -9,10 +9,10 @@ import { useDispatch } from 'react-redux'
 import {login as authLogin} from "../store/authSlice"
 
 function Login() {
-    const navigate = useNavigates()
+    const navigate = useNavigate()
     const [error, setError] = useState("")
     const dispatch = useDispatch()
-    const {register, handelSubmit} = useForm()
+    const {register, handleSubmit} = useForm()
 
     const login = async (data) => {
         setError("")

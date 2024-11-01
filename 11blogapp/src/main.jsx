@@ -42,7 +42,7 @@ const router = createBrowserRouter([
           </Protected>)
       },
       {
-        path: "/add-posts",
+        path: "/add-post",
         element: (<Protected authentication>
             <AddPost/>
           </Protected>)
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
           </Protected>)
       },
       {
-        path: "/posts/:slug",
+        path: "/post/:slug",
         element: (<Protected authentication>
             <Post/>
           </Protected>)
