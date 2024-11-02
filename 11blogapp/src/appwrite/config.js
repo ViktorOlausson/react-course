@@ -1,4 +1,4 @@
-import { Client, Databases, Query, Storage, ID } from "appwrite";
+import { Client, Databases, Query, Storage, ID , ImageFormat } from "appwrite";
 import conf from "../conf/conf";
 
 export class Service{
@@ -76,8 +76,11 @@ export class Service{
         }
     }
 
-    getFilePreview(fileId){
-        return this.bucket.getFilePreview(conf.appwriteBucketId, fileId).href
+    async getFilePreview(fileId){
+        //return this.bucket.getFilePreview(conf.appwriteBucketId, fileId).href
+        const response = await this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
+        console.log('Preview URL:', response?.href);  // Check if href is present in response
+        return response?.href;
     }
 }
 
