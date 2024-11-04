@@ -76,11 +76,11 @@ export class Service{
         }
     }
 
-    async getFilePreview(fileId){
-        //return this.bucket.getFilePreview(conf.appwriteBucketId, fileId).href
-        const response = await this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
-        console.log('Preview URL:', response?.href);  // Check if href is present in response
-        return response?.href;
+    getFilePreview(fileId){
+        return this.bucket.getFilePreview(conf.appwriteBucketId, fileId , 100, 100)
+        // const response = await this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
+        // console.log('Preview URL:', response?.href);  // Check if href is present in response
+        // return response?.href;
     }
 }
 
